@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<!-- 
+		场景：
+		本页面功能执行需要使用a和b两个模块，其中模块b依赖与模块a
+		 -->
+
+	<!-- 使用模块化工具require.js进行模块引入 -->
+	<!-- 使用方式：
+				1 引入文件
+				2 设置data-main属性:用于声明当前主模块的入口(用于放置本页面的功能代码，同时声明依赖关系)
+						data-main的值为一个js文件的路径
+
+				好处：
+					1 可以清晰地声明每个模块的依赖关系
+					2 不需要考虑模块引入的顺序的问题
+	 -->
+	<script src="/static/assets/vendors/require/require.js" data-main="main"></script>
+
+</body>
+</html>

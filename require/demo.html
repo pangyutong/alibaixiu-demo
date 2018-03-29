@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<!-- 模块化 -->
+<!-- 
+	<script>
+		// 第一个人写的功能代码
+		var num = 100;
+	</script>
+
+	<script>
+		// 第2个人写的功能代码
+		var num = 200;
+	</script>
+
+	<script>
+		
+		console.log(num);
+
+	</script> -->
+
+
+	<script>
+		//模块化:
+		//用于让一段代码的多个单独功能相互独立
+
+		//模块化的方式：
+		//1 使用自调用函数的方式将每个功能进行独立
+		/*var result1 = (function () {
+
+			var num = 100;
+
+			return num + 200;
+
+		})();
+
+		var result2 = (function () {
+
+			var num = 200;
+
+			return { sum1 :num + 300, sum2: num-20};
+
+		})();
+
+		result2.sum2
+
+		(function () {
+
+			var num = 200;
+
+			//将需要暴露的值设置给window
+			window.result3 = num + 300;
+			window.result4 = num - 20;
+
+		})();
+*/
+	</script>
+
+
+	<!-- 引入a与b两个模块 -->
+	<!-- 
+				如果模块b内部代码需要使用模块a的功能，注意a要在b之前先引入
+				这种情况我们就称模块b依赖与模块a
+				依赖性最强的模块要最后引入
+
+	 -->
+	<script src="a.js"></script>
+	<script src="b.js"></script>
+
+	<script>
+		console.log(a);
+		console.log(b);
+
+
+
+	</script>
+
+</body>
+</html>
